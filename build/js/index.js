@@ -42,5 +42,27 @@ console.log('array.replaceMinMax() - replace min number and max number');
 //2. Create function which will return function with callback in arguments
 //3. Create a function that will replace all number dividing three with ‘foo’, dividing seven with ‘bar’ and dividing three and seven with ‘foobar’. Function with n params.
 //4. Create function with 2 string params. It must check if letters in the first correspond to the number of matches in second and return %.
+function correspondStr(text1, text2) {
+
+  let correspondArr = [],
+    letters;
+
+  if(text1.length > text2.length) {
+    letters = text1.length;
+  } else {
+    letters = text2.length;
+  }
+
+  for(let i = 0; i < text1.length; i++) {
+    for(let j = 0; j < text2.length; j++) {
+      if(text1[i] === text2[j]) {
+        correspondArr.push(text1[i]);
+      }
+    }
+  }
+
+  return (correspondArr.length / letters) * 100;
+}
+
 //5. Advanced tasks (optional):
 // - Create calculator.
