@@ -38,9 +38,36 @@ console.log('array.mySum() - return sum');
 console.log('array.myMax() - return max');
 console.log('array.myMin() - return min');
 console.log('array.replaceMinMax() - replace min number and max number');
+console.log('myCallback(numbers)() - callback function that return sum');
+console.log('foobar(numbers) - return foo, bar, foobar');
+console.log('correspondStr(string1, string2) - correspond letters');
 
 //2. Create function which will return function with callback in arguments
+function myCallback(...args) {
+  return function() {
+    let sum = 0;
+    for(let i = 0; i < args.length; i++) {
+      sum += args[i];
+    }
+    return sum;
+  }
+}
 //3. Create a function that will replace all number dividing three with ‘foo’, dividing seven with ‘bar’ and dividing three and seven with ‘foobar’. Function with n params.
+function foobar(...args) {
+  for(let i = 0; i < args.length; i++) {
+    if((args[i] % 3 === 0) && (args[i] % 7 === 0)) {
+      args[i] = 'foobar';
+    }
+    if(args[i] % 3 === 0) {
+      args[i] = 'foo';
+    }
+    if(args[i] % 7 === 0) {
+      args[i] = 'bar';
+    }
+  }
+   return args;
+}
+
 //4. Create function with 2 string params. It must check if letters in the first correspond to the number of matches in second and return %.
 function correspondStr(text1, text2) {
 
@@ -66,3 +93,5 @@ function correspondStr(text1, text2) {
 
 //5. Advanced tasks (optional):
 // - Create calculator.
+
+//calculator.js

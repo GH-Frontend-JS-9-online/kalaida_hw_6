@@ -5,10 +5,27 @@
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Homework 6</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+  <main>
+    <div class="calculator">
+      <input type="text" name="number1" id="number1" value="0" class="calculator--input">
+      <input type="text" name="number2" id="number2" value="0" class="calculator--input">
+      <div class="calculator__buttons">
+        <a href="#" class="calculator--btn" id="plus" onclick="sumFunc()">+</a>
+        <a href="#" class="calculator--btn" id="minus">-</a>
+        <a href="#" class="calculator--btn" id="multiplication">*</a>
+        <a href="#" class="calculator--btn" id="divide">/</a>
+        <a href="#" class="calculator--btn" id="exponentiation">**</a>
+        <a href="#" class="calculator--btn" id="remainder">%</a>
+      </div>
+      <input type="text" name="result" id="result" class="calculator--result" readonly>
+    </div>
+  </main>
 
   <script src="js/index.js"></script>
+  <script src="js/calculator.js"></script>
 </body>
 </html>
